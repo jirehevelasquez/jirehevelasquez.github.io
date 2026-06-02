@@ -3,15 +3,18 @@
 	Forty by HTML5 UP
 	html5up.net | @ajlkn
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+	Customized for Jireh Velasquez's mechanical engineering portfolio.
 -->
 <html>
 	<head>
-		<title>Generic - Forty by HTML5 UP</title>
+		<title>Romi Mechatronics Project | Jireh Velasquez</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<meta name="description" content="Romi mechatronics project by Jireh Velasquez featuring embedded software, cooperative multitasking, PI control, sensor integration, line following, IMU data, and technical documentation." />
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 	</head>
+
 	<body class="is-preload">
 
 		<!-- Wrapper -->
@@ -19,7 +22,7 @@
 
 				<!-- Header -->
 					<header id="header">
-						<a href="index.html" class="logo"><strong>Forty</strong> <span>by HTML5 UP</span></a>
+						<a href="index.html" class="logo"><strong>Jireh Velasquez</strong> <span>Mechanical Engineering Portfolio</span></a>
 						<nav>
 							<a href="#menu">Menu</a>
 						</nav>
@@ -29,29 +32,233 @@
 					<nav id="menu">
 						<ul class="links">
 							<li><a href="index.html">Home</a></li>
-							<li><a href="landing.html">Landing</a></li>
-							<li><a href="generic.html">Generic</a></li>
-							<li><a href="elements.html">Elements</a></li>
+							<li><a href="index.html#one">Projects</a></li>
+							<li><a href="index.html#two">About</a></li>
+							<li><a href="index.html#contact">Contact</a></li>
+							<li><a href="resume.pdf">Resume</a></li>
 						</ul>
 						<ul class="actions stacked">
-							<li><a href="#" class="button primary fit">Get Started</a></li>
-							<li><a href="#" class="button fit">Log In</a></li>
+							<li><a href="index.html#one" class="button primary fit">View Projects</a></li>
+							<li><a href="https://github.com/jirehevelasquez" class="button fit">GitHub</a></li>
 						</ul>
 					</nav>
 
 				<!-- Main -->
 					<div id="main" class="alt">
 
-						<!-- One -->
+						<!-- Project Case Study -->
 							<section id="one">
 								<div class="inner">
+
 									<header class="major">
-										<h1>Generic</h1>
+										<h1>Romi Mechatronics Project</h1>
 									</header>
-									<span class="image main"><img src="images/pic11.jpg" alt="" /></span>
-									<p>Donec eget ex magna. Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque venenatis dolor imperdiet dolor mattis sagittis. Praesent rutrum sem diam, vitae egestas enim auctor sit amet. Pellentesque leo mauris, consectetur id ipsum sit amet, fergiat. Pellentesque in mi eu massa lacinia malesuada et a elit. Donec urna ex, lacinia in purus ac, pretium pulvinar mauris. Curabitur sapien risus, commodo eget turpis at, elementum convallis elit. Pellentesque enim turpis, hendrerit.</p>
-									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis dapibus rutrum facilisis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Etiam tristique libero eu nibh porttitor fermentum. Nullam venenatis erat id vehicula viverra. Nunc ultrices eros ut ultricies condimentum. Mauris risus lacus, blandit sit amet venenatis non, bibendum vitae dolor. Nunc lorem mauris, fringilla in aliquam at, euismod in lectus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. In non lorem sit amet elit placerat maximus. Pellentesque aliquam maximus risus, vel sed vehicula.</p>
-									<p>Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque venenatis dolor imperdiet dolor mattis sagittis. Praesent rutrum sem diam, vitae egestas enim auctor sit amet. Pellentesque leo mauris, consectetur id ipsum sit amet, fersapien risus, commodo eget turpis at, elementum convallis elit. Pellentesque enim turpis, hendrerit tristique lorem ipsum dolor.</p>
+
+									<span class="image main">
+										<img src="images/pic01.jpg" alt="Romi mobile robot project" />
+									</span>
+
+									<p>
+										This project was a mechatronics course project focused on building, programming,
+										tuning, and documenting a Pololu Romi-based mobile robot. The goal was to create
+										an embedded control system that allowed the robot to navigate a complex line course
+										autonomously using sensors, motor feedback, state estimation, and closed-loop control.
+									</p>
+
+									<hr />
+
+									<h2>Project Snapshot</h2>
+									<div class="table-wrapper">
+										<table>
+											<tbody>
+												<tr>
+													<td><strong>Project Type</strong></td>
+													<td>Mechatronics, embedded systems, robotics, controls, documentation</td>
+												</tr>
+												<tr>
+													<td><strong>Platform</strong></td>
+													<td>Pololu Romi differential-drive robot with Nucleo microcontroller</td>
+												</tr>
+												<tr>
+													<td><strong>Role</strong></td>
+													<td>Embedded software development, control tuning, sensor integration, debugging, and technical documentation</td>
+												</tr>
+												<tr>
+													<td><strong>Tools</strong></td>
+													<td>Python / MicroPython, GitHub, Read the Docs, Sphinx, Nucleo board, IMU, encoders, IR light sensors, bump sensors</td>
+												</tr>
+												<tr>
+													<td><strong>Status</strong></td>
+													<td>Completed course project with working robot, public code repository, and project documentation</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+
+									<h2>Overview</h2>
+									<p>
+										Romi is a small differential-drive robot built around a Pololu chassis and motor system.
+										The robot was programmed to follow a black line through a course using an array of IR
+										light sensors. Sensor readings were processed to estimate the line position, and a PI
+										controller adjusted the left and right wheel speeds to keep the robot centered on the path.
+									</p>
+
+									<p>
+										The project also used bump sensors and a high-level discrete state machine to help the
+										robot estimate where it was within the course. The final system combined embedded software,
+										motor control, sensor calibration, serial communication, data collection, and iterative
+										debugging into one integrated robotic platform.
+									</p>
+
+									<h2>Problem / Goal</h2>
+									<p>
+										The engineering challenge was to make Romi navigate a line-following course as quickly and
+										reliably as possible while dealing with real-world sensor noise, motor mismatch, timing
+										limitations, hardware issues, and course features such as turns, dotted-line sections,
+										obstacles, and wall/garage regions.
+									</p>
+
+									<p>
+										This required more than basic line following. The robot needed a task-based software
+										architecture, tuned wheel-speed control, line sensor calibration, data logging, state
+										estimation, and a strategy layer that could change behavior depending on where Romi was
+										on the track.
+									</p>
+
+									<h2>My Role</h2>
+									<p>
+										My work focused on the embedded software and system integration needed to make the robot
+										function as a complete mechatronic system. I contributed to the codebase, control logic,
+										data collection, debugging workflow, sensor integration, project documentation, and final
+										technical writeup.
+									</p>
+
+									<ul>
+										<li>Developed and organized embedded Python code for the Romi/Nucleo platform.</li>
+										<li>Implemented cooperative multitasking using separate task generators for sensing, control, user interface, and track behavior.</li>
+										<li>Worked with encoder data, IMU readings, IR light sensors, bump sensors, and shared variables between tasks.</li>
+										<li>Tuned PI control behavior for motor response and line-following performance.</li>
+										<li>Documented the project with a GitHub repository and Sphinx/Read the Docs website.</li>
+										<li>Debugged hardware/software issues including sensor behavior, motor control, state estimation, and communication problems.</li>
+									</ul>
+
+									<h2>Engineering Process</h2>
+									<p>
+										The project was developed through an iterative process of building the hardware platform,
+										bringing up individual sensors and motors, writing task-based embedded software, collecting
+										test data, tuning control gains, calibrating sensors, and refining course-specific behavior.
+									</p>
+
+									<p>
+										The software was structured using cooperative multitasking. Each task was responsible for
+										a specific function, such as data collection, left motor control, right motor control, user
+										interface commands, PI control, light sensor processing, IMU handling, or high-level track
+										strategy. Shared variables and queues allowed the tasks to exchange information while keeping
+										the code organized and modular.
+									</p>
+
+									<h2>Technical Work</h2>
+
+									<h3>Embedded Software Architecture</h3>
+									<ul>
+										<li><strong>Data collection task:</strong> sampled key internal variables such as wheel velocities, motor efforts, estimated states, and line position for debugging and analysis.</li>
+										<li><strong>Left and right motor tasks:</strong> read wheel encoder data and applied motor effort commands to control each side of the differential drive system.</li>
+										<li><strong>User interface task:</strong> provided a serial interface for testing, calibration, status checks, and tuning commands.</li>
+										<li><strong>PI controller task:</strong> converted error between setpoints and measured behavior into motor control output.</li>
+										<li><strong>Light sensor task:</strong> calibrated sensor readings, calculated line centroid, and generated steering corrections.</li>
+										<li><strong>IMU task:</strong> initialized and read orientation-related data used for heading estimation and track behavior.</li>
+										<li><strong>Track task:</strong> implemented the high-level state machine that selected robot behavior for different course regions.</li>
+									</ul>
+
+									<h3>Controls and Sensor Calibration</h3>
+									<ul>
+										<li>Measured wheel velocity response over time to estimate motor time constants.</li>
+										<li>Tuned proportional and integral gains to improve response speed, reduce overshoot, and maintain steady-state behavior.</li>
+										<li>Calibrated IR light sensors using black and white reference readings to normalize line detection.</li>
+										<li>Used IMU calibration offsets to improve orientation readings during the course.</li>
+										<li>Modeled differential-drive behavior using wheel velocity, heading, arc distance, and state-estimation relationships.</li>
+									</ul>
+
+									<h3>Hardware Integration</h3>
+									<ul>
+										<li>Pololu Romi chassis and motor/encoder assemblies</li>
+										<li>Nucleo-L476RG microcontroller board</li>
+										<li>BNO055 IMU for heading/orientation data</li>
+										<li>Analog QTR reflectance sensors for black-line tracking</li>
+										<li>Bump sensors for obstacle/contact detection</li>
+										<li>HC-06 Bluetooth module for wireless communication attempts</li>
+										<li>Motor driver and custom wiring between sensors, actuators, and controller hardware</li>
+									</ul>
+
+									<h2>Tools Used</h2>
+									<ul>
+										<li><strong>Programming:</strong> Python / MicroPython-style embedded code</li>
+										<li><strong>Controls:</strong> PI control, motor response tuning, line-following correction</li>
+										<li><strong>Sensors:</strong> IR line sensors, wheel encoders, IMU, bump sensors</li>
+										<li><strong>Documentation:</strong> GitHub, Sphinx, Read the Docs</li>
+										<li><strong>Debugging:</strong> serial communication, data logging, sensor calibration, iterative track testing</li>
+									</ul>
+
+									<h2>Results / Status</h2>
+									<p>
+										The final robot was able to navigate the line course and reach the wall/garage section.
+										The system performed consistently through most of the course, although the dotted-line
+										section created occasional line-loss behavior that could cause the robot to enter a
+										circular failure mode. This gave the project a realistic engineering tradeoff: the robot
+										worked, but remaining performance limitations were identified and documented.
+									</p>
+
+									<p>
+										The completed project includes a public GitHub repository containing the robot code and
+										a Read the Docs site containing the technical documentation, hardware description, wiring
+										information, task breakdown, code files, analysis, timed trial notes, and issues experienced.
+									</p>
+
+									<h2>Challenges and Debugging</h2>
+									<ul>
+										<li><strong>Bluetooth reliability:</strong> Bluetooth modules were damaged during testing, eventually limiting wireless communication.</li>
+										<li><strong>Nucleo pin issue:</strong> a bad PWM pin caused right motor control problems until the motor signal was moved to a different pin.</li>
+										<li><strong>State estimation timing:</strong> inconsistent task timing created jumps in calculated state-estimation values.</li>
+										<li><strong>IMU instability near metal structures:</strong> heading readings became volatile near the steel garage/cage section, requiring the robot to rely more heavily on encoder-based behavior in that region.</li>
+									</ul>
+
+									<h2>Key Takeaways</h2>
+									<p>
+										This project strengthened my ability to connect mechanical hardware, embedded software,
+										sensors, control theory, and real-world testing into a single working robotic system. It
+										also reinforced the importance of modular software architecture, calibration, debugging
+										tools, and documentation when developing a system that must operate reliably outside of
+										an ideal lab environment.
+									</p>
+
+									<p>
+										The most valuable engineering lesson was that successful mechatronics work depends on both
+										theory and practical troubleshooting. Sensor noise, damaged hardware, timing delays, and
+										unexpected environmental effects can dominate system behavior, so the design must include
+										good test methods, calibration routines, and fallback strategies.
+									</p>
+
+									<h2>Media / Documentation</h2>
+									<p>
+										The full codebase and technical documentation are available through GitHub and Read the Docs.
+										The documentation includes project overview material, hardware descriptions, wiring information,
+										task architecture, code files, analysis, timed trial notes, and a summary of issues encountered
+										during development.
+									</p>
+
+									<ul class="actions">
+										<li><a href="https://github.com/jirehevelasquez/mech-romi-files-" class="button primary">GitHub Repository</a></li>
+										<li><a href="https://mech-romi-files.readthedocs.io/en/latest/index.html" class="button">Read the Docs</a></li>
+										<li><a href="https://youtube.com/shorts/JdS9ZOgFjK8" class="button">Demo Video</a></li>
+									</ul>
+
+									<hr />
+
+									<ul class="actions">
+										<li><a href="index.html#one" class="button primary">Back to Projects</a></li>
+										<li><a href="resume.pdf" class="button">View Resume</a></li>
+									</ul>
+
 								</div>
 							</section>
 
@@ -60,52 +267,48 @@
 				<!-- Contact -->
 					<section id="contact">
 						<div class="inner">
+
 							<section>
-								<form method="post" action="#">
-									<div class="fields">
-										<div class="field half">
-											<label for="name">Name</label>
-											<input type="text" name="name" id="name" />
-										</div>
-										<div class="field half">
-											<label for="email">Email</label>
-											<input type="text" name="email" id="email" />
-										</div>
-										<div class="field">
-											<label for="message">Message</label>
-											<textarea name="message" id="message" rows="6"></textarea>
-										</div>
-									</div>
-									<ul class="actions">
-										<li><input type="submit" value="Send Message" class="primary" /></li>
-										<li><input type="reset" value="Clear" /></li>
-									</ul>
-								</form>
+								<header class="major">
+									<h2>Contact</h2>
+								</header>
+								<p>
+									I am interested in mechanical engineering opportunities involving design,
+									aerospace systems, mechatronics, manufacturing, testing, prototyping,
+									robotics, and hands-on engineering work.
+								</p>
+								<ul class="actions">
+									<li><a href="mailto:jirehevelasquez@gmail.com" class="button primary">Email Me</a></li>
+									<li><a href="resume.pdf" class="button">Resume</a></li>
+								</ul>
 							</section>
+
 							<section class="split">
+
 								<section>
 									<div class="contact-method">
 										<span class="icon solid alt fa-envelope"></span>
 										<h3>Email</h3>
-										<a href="#">information@untitled.tld</a>
+										<a href="mailto:jirehevelasquez@gmail.com">jirehevelasquez@gmail.com</a>
 									</div>
 								</section>
+
 								<section>
 									<div class="contact-method">
-										<span class="icon solid alt fa-phone"></span>
-										<h3>Phone</h3>
-										<span>(000) 000-0000 x12387</span>
+										<span class="icon brands alt fa-github"></span>
+										<h3>GitHub</h3>
+										<a href="https://github.com/jirehevelasquez">github.com/jirehevelasquez</a>
 									</div>
 								</section>
+
 								<section>
 									<div class="contact-method">
-										<span class="icon solid alt fa-home"></span>
-										<h3>Address</h3>
-										<span>1234 Somewhere Road #5432<br />
-										Nashville, TN 00000<br />
-										United States of America</span>
+										<span class="icon brands alt fa-linkedin-in"></span>
+										<h3>LinkedIn</h3>
+										<a href="https://www.linkedin.com/in/your-linkedin">LinkedIn Profile</a>
 									</div>
 								</section>
+
 							</section>
 						</div>
 					</section>
@@ -114,14 +317,13 @@
 					<footer id="footer">
 						<div class="inner">
 							<ul class="icons">
-								<li><a href="#" class="icon brands alt fa-twitter"><span class="label">Twitter</span></a></li>
-								<li><a href="#" class="icon brands alt fa-facebook-f"><span class="label">Facebook</span></a></li>
-								<li><a href="#" class="icon brands alt fa-instagram"><span class="label">Instagram</span></a></li>
-								<li><a href="#" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
-								<li><a href="#" class="icon brands alt fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
+								<li><a href="mailto:jirehevelasquez@gmail.com" class="icon solid alt fa-envelope"><span class="label">Email</span></a></li>
+								<li><a href="https://github.com/jirehevelasquez" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
+								<li><a href="https://www.linkedin.com/in/your-linkedin" class="icon brands alt fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
 							</ul>
 							<ul class="copyright">
-								<li>&copy; Untitled</li><li>Design: <a href="https://html5up.net">HTML5 UP</a></li>
+								<li>&copy; Jireh Velasquez</li>
+								<li>Design: <a href="https://html5up.net">HTML5 UP</a></li>
 							</ul>
 						</div>
 					</footer>
