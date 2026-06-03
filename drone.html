@@ -3,139 +3,386 @@
 	Forty by HTML5 UP
 	html5up.net | @ajlkn
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+	Customized for Jireh Velasquez's mechanical engineering portfolio.
 -->
 <html>
 	<head>
-		<title>Generic - Forty by HTML5 UP</title>
+		<title>Indoor UAV Localization and Payload Pickup Project | Jireh Velasquez</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<meta name="description" content="Indoor UAV localization and payload pickup project by Jireh Velasquez featuring Kinect-based depth sensing, MAVLink communication, ArduPilot, frame transformations, computer vision, and payload pickup concepts." />
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 	</head>
+
 	<body class="is-preload">
 
-		<!-- Wrapper -->
-			<div id="wrapper">
+		<div id="wrapper">
 
-				<!-- Header -->
-					<header id="header">
-						<a href="index.html" class="logo"><strong>Forty</strong> <span>by HTML5 UP</span></a>
-						<nav>
-							<a href="#menu">Menu</a>
-						</nav>
-					</header>
+			<header id="header">
+				<a href="index.html" class="logo"><strong>Jireh Velasquez</strong> <span>Mechanical Engineering Portfolio</span></a>
+				<nav>
+					<a href="#menu">Menu</a>
+				</nav>
+			</header>
 
-				<!-- Menu -->
-					<nav id="menu">
-						<ul class="links">
-							<li><a href="index.html">Home</a></li>
-							<li><a href="landing.html">Landing</a></li>
-							<li><a href="generic.html">Generic</a></li>
-							<li><a href="elements.html">Elements</a></li>
+			<nav id="menu">
+				<ul class="links">
+					<li><a href="index.html">Home</a></li>
+					<li><a href="index.html#one">Projects</a></li>
+					<li><a href="index.html#two">About</a></li>
+					<li><a href="index.html#contact">Contact</a></li>
+					<li><a href="resume.pdf">Resume</a></li>
+				</ul>
+				<ul class="actions stacked">
+					<li><a href="index.html#one" class="button primary fit">View Projects</a></li>
+					<li><a href="https://github.com/jirehevelasquez" class="button fit">GitHub</a></li>
+				</ul>
+			</nav>
+
+			<div id="main" class="alt">
+
+				<section id="one">
+					<div class="inner">
+
+						<header class="major">
+							<h1>Indoor UAV Localization and Payload Pickup Project</h1>
+						</header>
+
+						<span class="image main">
+							<img src="images/drone-main.jpg" alt="Indoor UAV localization and payload pickup quadrotor project" />
+						</span>
+
+						<h2>Media / Documentation</h2>
+						<p>
+							This project, also developed under the team name Project Phoenix, included a final technical report,
+							design updates, Python control scripts, and a hover-test video. The strongest supporting materials
+							are the final report, selected CAD or prototype photos, the hover-test video, and the Python scripts
+							used for Kinect localization, MAVLink communication, EKF origin setup, and mission-state planning.
+						</p>
+
+						<ul class="actions">
+							<li><a href="files/project-phoenix-final-report.pdf" class="button primary">Final Report</a></li>
+							<li><a href="media/hover-test.mp4" class="button">Hover Test Video</a></li>
+							<li><a href="files/mission_pickup_dropoff.py" class="button">Mission Script</a></li>
 						</ul>
-						<ul class="actions stacked">
-							<li><a href="#" class="button primary fit">Get Started</a></li>
-							<li><a href="#" class="button fit">Log In</a></li>
+
+						<p>
+							<strong>Note:</strong> These buttons will work after the matching files are uploaded to the repository.
+							For example, upload the final report as <code>files/project-phoenix-final-report.pdf</code>,
+							the hover video as <code>media/hover-test.mp4</code>, and the mission script as
+							<code>files/mission_pickup_dropoff.py</code>.
+						</p>
+
+						<hr />
+
+						<p>
+							Indoor UAV Localization and Payload Pickup was a team-based ME 423 robotics project focused on
+							building and testing a small quadrotor UAV system for GPS-denied indoor localization, MAVLink-based
+							flight-controller communication, Kinect-based visual feedback, and payload interaction using a
+							suspended electromagnet end effector.
+						</p>
+
+						<h2>Project Snapshot</h2>
+						<div class="table-wrapper">
+							<table>
+								<tbody>
+									<tr>
+										<td><strong>Project Type</strong></td>
+										<td>Robotics, UAV systems, mechatronics, computer vision, controls, payload interaction</td>
+									</tr>
+									<tr>
+										<td><strong>Course</strong></td>
+										<td>ME 423 Robotics: Applications and Fundamentals, Cal Poly San Luis Obispo</td>
+									</tr>
+									<tr>
+										<td><strong>Team</strong></td>
+										<td>Aiden Anderson, Isaiah Guerrero, Arturo Ramirez, Jireh Velasquez, Ryan Westcott</td>
+									</tr>
+									<tr>
+										<td><strong>My Role</strong></td>
+										<td>Controls and software integration, MAVLink communication, computer vision localization support, flight-controller setup, test/debug workflow, and mission logic development</td>
+									</tr>
+									<tr>
+										<td><strong>Hardware</strong></td>
+										<td>Quadrotor airframe, Cube Orange flight controller, ESC stack, brushless motors, 6S LiPo battery, ELRS radio link, Xbox 360 Kinect, electromagnet end effector</td>
+									</tr>
+									<tr>
+										<td><strong>Software</strong></td>
+										<td>Python, OpenCV, OpenNI2, NumPy, Matplotlib, PyMAVLink, ArduPilot, Mission Planner</td>
+									</tr>
+									<tr>
+										<td><strong>Status</strong></td>
+										<td>Proof-of-concept completed: localization, MAVLink communication, and closed-loop hover testing demonstrated; full autonomous pickup/drop-off mission was not fully integrated within the project timeline</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+
+						<h2>Overview</h2>
+						<p>
+							The goal of this project was to demonstrate a small UAV system that could operate in an indoor,
+							GPS-denied environment using an offboard depth camera for position feedback. Instead of relying on GPS,
+							the system used an Xbox 360 Kinect camera to detect and localize a target object in three-dimensional
+							space. The measured position was then transformed into a coordinate frame useful for the drone and
+							communicated to the flight controller through MAVLink.
+						</p>
+
+						<p>
+							The larger mission concept was to have the drone localize itself, navigate toward a ferromagnetic
+							package, activate an electromagnet end effector, transport the payload, and release it at a selected
+							drop-off location. The final project did not fully complete the entire pickup/drop-off mission, but it
+							successfully demonstrated several major subsystems: UAV assembly, flight-controller communication,
+							camera-based object tracking, frame transformations, EKF-origin setup, MAVLink data transmission, and
+							closed-loop hover testing.
+						</p>
+
+						<h2>Problem / Goal</h2>
+						<p>
+							Indoor UAV autonomy is difficult because GPS is unavailable or unreliable. The engineering problem was
+							to create an alternate localization pipeline that could estimate drone or target position using vision
+							data, transform that measurement into a useful navigation frame, and pass the result to the drone's
+							flight-control stack.
+						</p>
+
+						<p>
+							The project also introduced a mechanical payload interaction challenge. The drone needed enough thrust,
+							structural stiffness, and packaging space to support avionics, a battery, radio hardware, and a suspended
+							magnetic end effector while still remaining flyable and controllable.
+						</p>
+
+						<h2>My Role</h2>
+						<p>
+							My role focused on controls and software integration. I worked on the software and communication side
+							of the drone, including MAVLink communication, flight-controller setup, localization data handling,
+							testing scripts, and mission-state logic for the planned pickup/drop-off sequence.
+						</p>
+
+						<ul>
+							<li>Helped develop Python scripts for communicating with the Cube Orange flight controller through PyMAVLink.</li>
+							<li>Worked on setting the EKF/global origin and verifying MAVLink communication with the flight computer.</li>
+							<li>Supported Kinect-based localization using OpenCV, OpenNI2, HSV masking, centroid detection, and depth measurements.</li>
+							<li>Worked with coordinate transformations from camera measurements into North-East-Down style coordinates.</li>
+							<li>Helped test and debug closed-loop position feedback during early hover testing.</li>
+							<li>Developed mission-state logic for a planned pickup/drop-off sequence using search, approach, attach, drop-off, release, and done states.</li>
 						</ul>
-					</nav>
 
-				<!-- Main -->
-					<div id="main" class="alt">
+						<h2>Engineering Process</h2>
+						<p>
+							The project began with a search-and-rescue inspired UAV concept. The team first defined the major
+							subsystems: airframe, propulsion, flight controller, battery, receiver, external sensing, onboard
+							communication, and end effector. Early design work used a standard quadrotor architecture because it
+							provided a practical balance between maneuverability, component availability, and control complexity.
+						</p>
 
-						<!-- One -->
-							<section id="one">
-								<div class="inner">
-									<header class="major">
-										<h1>Generic</h1>
-									</header>
-									<span class="image main"><img src="images/pic11.jpg" alt="" /></span>
-									<p>Donec eget ex magna. Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque venenatis dolor imperdiet dolor mattis sagittis. Praesent rutrum sem diam, vitae egestas enim auctor sit amet. Pellentesque leo mauris, consectetur id ipsum sit amet, fergiat. Pellentesque in mi eu massa lacinia malesuada et a elit. Donec urna ex, lacinia in purus ac, pretium pulvinar mauris. Curabitur sapien risus, commodo eget turpis at, elementum convallis elit. Pellentesque enim turpis, hendrerit.</p>
-									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis dapibus rutrum facilisis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Etiam tristique libero eu nibh porttitor fermentum. Nullam venenatis erat id vehicula viverra. Nunc ultrices eros ut ultricies condimentum. Mauris risus lacus, blandit sit amet venenatis non, bibendum vitae dolor. Nunc lorem mauris, fringilla in aliquam at, euismod in lectus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. In non lorem sit amet elit placerat maximus. Pellentesque aliquam maximus risus, vel sed vehicula.</p>
-									<p>Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque venenatis dolor imperdiet dolor mattis sagittis. Praesent rutrum sem diam, vitae egestas enim auctor sit amet. Pellentesque leo mauris, consectetur id ipsum sit amet, fersapien risus, commodo eget turpis at, elementum convallis elit. Pellentesque enim turpis, hendrerit tristique lorem ipsum dolor.</p>
-								</div>
-							</section>
+						<p>
+							As the project matured, the design shifted toward a more specific indoor-localization and payload
+							pickup demonstration. The final design included larger propellers, larger motors, a redesigned
+							3D-printed frame, a Cube Orange flight controller, an ELRS radio link, an offboard Kinect sensing
+							system, and a suspended electromagnet end effector. This changed the project from a broad rescue-drone
+							concept into a more focused robotics proof-of-concept.
+						</p>
+
+						<h2>Technical Work</h2>
+
+						<h3>UAV Hardware and Mechanical Integration</h3>
+						<ul>
+							<li>Used a quadrotor configuration to provide six-degree-of-freedom motion with four propellers.</li>
+							<li>Integrated propulsion hardware, ESC stack, flight controller, receiver, battery, wiring, and payload hardware.</li>
+							<li>Evaluated packaging constraints for the electronics stack, battery, propeller clearance, and suspended payload.</li>
+							<li>Iterated from the original frame concept toward a refined 3D-printed design with updated motor and propeller sizing.</li>
+							<li>Integrated an electromagnet end effector below the airframe for planned package pickup and release.</li>
+						</ul>
+
+						<h3>Computer Vision and Depth Sensing</h3>
+						<ul>
+							<li>Used an Xbox 360 Kinect as an offboard depth camera for indoor localization.</li>
+							<li>Used OpenNI2 to access color and depth streams from the Kinect.</li>
+							<li>Used OpenCV to convert images into HSV color space and generate masks for target tracking.</li>
+							<li>Detected a colored target by identifying the centroid of masked pixels in the image frame.</li>
+							<li>Used depth measurements near the centroid to estimate the target's distance from the camera.</li>
+							<li>Converted pixel and depth information into 3D Cartesian position measurements relative to the camera frame.</li>
+						</ul>
+
+						<h3>Frame Transformations and Localization</h3>
+						<p>
+							A major part of the project was defining the frames needed to relate the camera, drone, tool, and
+							target package. The team modeled the universal frame, camera/Kinect frame, drone frame, tool or
+							electromagnet frame, and package frame. The localization problem required transforming measured
+							target locations from the Kinect frame into a frame useful for drone motion and payload pickup.
+						</p>
+
+						<ul>
+							<li>Defined coordinate frames for the camera, drone, end effector, and target package.</li>
+							<li>Used transformation matrices to relate camera measurements to drone-relative motion commands.</li>
+							<li>Converted camera-frame position data into North-East-Down style coordinates for MAVLink communication.</li>
+							<li>Used Python and NumPy for matrix operations, coordinate conversions, and testing calculations.</li>
+						</ul>
+
+						<h3>MAVLink, ArduPilot, and Flight-Controller Communication</h3>
+						<ul>
+							<li>Used PyMAVLink to communicate with the Cube Orange flight controller.</li>
+							<li>Worked with MAVLink messages for heartbeat detection, EKF/global-origin setup, local position feedback, and vision-position estimates.</li>
+							<li>Used ArduPilot and Mission Planner for configuration, calibration, parameter access, and flight-controller setup.</li>
+							<li>Tested communication over both direct USB-C connection and wireless communication pathways.</li>
+							<li>Verified that localization data could be sent to the flight controller as part of the closed-loop feedback workflow.</li>
+						</ul>
+
+						<h3>Mission-State Logic</h3>
+						<p>
+							The mission script was structured around a finite state machine intended to guide the drone through a
+							complete payload mission. The intended sequence was:
+						</p>
+
+						<ul>
+							<li><strong>SEARCH:</strong> identify and lock onto the drone and package targets.</li>
+							<li><strong>APPROACH_PACKAGE:</strong> move the drone toward the detected package location.</li>
+							<li><strong>ATTACH:</strong> activate the electromagnet when the tool is close enough to the package.</li>
+							<li><strong>GO_TO_DROPOFF:</strong> move toward a user-defined drop-off direction and distance.</li>
+							<li><strong>RELEASE:</strong> deactivate the electromagnet to release the package.</li>
+							<li><strong>DONE:</strong> end the mission sequence.</li>
+						</ul>
+
+						<p>
+							This full mission-state code was written as a planned integration path, but the final project timeline
+							ended before the team could fully combine the hover-test communication code with the complete
+							pickup/drop-off autonomy script.
+						</p>
+
+						<h2>Tools Used</h2>
+						<ul>
+							<li><strong>Flight Control:</strong> Cube Orange, ArduPilot, Mission Planner, MAVLink, PyMAVLink</li>
+							<li><strong>Computer Vision:</strong> Xbox 360 Kinect, OpenNI2, OpenCV, HSV masking, centroid tracking, depth sensing</li>
+							<li><strong>Programming:</strong> Python, NumPy, Matplotlib, dataclasses, finite state machine logic</li>
+							<li><strong>Mechanical / Electrical:</strong> quadrotor frame, brushless motors, ESC stack, 6S LiPo battery, wiring, ELRS transceiver, end-effector mounting</li>
+							<li><strong>Testing:</strong> hover testing, target tracking, local position logging, camera-vs-drone position comparison plots</li>
+						</ul>
+
+						<h2>Results / Status</h2>
+						<p>
+							The team successfully demonstrated several key parts of the system. The Kinect-based vision pipeline
+							was able to track a colored target, identify its centroid, and use depth data to estimate its position
+							in three-dimensional space. The system also successfully communicated with the flight controller using
+							MAVLink, and the team was able to configure the EKF/global origin after tuning connection and
+							flight-controller settings.
+						</p>
+
+						<p>
+							During hover testing, the closed-loop feedback system showed that camera-derived position data could
+							be sent to the drone as part of the localization workflow. The system was not perfect: turbulence from
+							the indoor test area, lighting sensitivity in the computer-vision mask, and drift from the setpoint
+							created instability and limited position-holding performance. The final pickup/drop-off waypoint
+							mission was not fully integrated before the project deadline, but the project still validated the core
+							sensing, communication, and control architecture needed for future development.
+						</p>
+
+						<h2>Challenges and Debugging</h2>
+						<ul>
+							<li><strong>Lighting sensitivity:</strong> HSV masking and depth readings were affected by changing room lighting and surrounding objects.</li>
+							<li><strong>Indoor turbulence:</strong> flight testing near desks, lockers, and room obstacles caused disturbed airflow and hover instability.</li>
+							<li><strong>MAVLink setup:</strong> the team had to tune connection settings and flight-controller parameters to reliably communicate with the Cube Orange.</li>
+							<li><strong>EKF/local-origin limitations:</strong> EKF/global-origin setup was achieved, but local-origin setup was more limited and worked best through a direct USB-C connection.</li>
+							<li><strong>System integration timeline:</strong> the team produced separate working components, but the full autonomous pickup/drop-off mission was not completely integrated before the final deadline.</li>
+						</ul>
+
+						<h2>Key Takeaways</h2>
+						<p>
+							This project gave me practical experience integrating mechanical hardware, flight electronics,
+							computer vision, state estimation, and Python-based communication into a real UAV system. It also
+							showed the difference between developing working subsystems and integrating them into a reliable
+							full-stack autonomous robot.
+						</p>
+
+						<p>
+							The biggest engineering lesson was that UAV autonomy depends heavily on reliable sensing, correct
+							frame transformations, clean communication, and stable flight behavior. Even when the software logic
+							is reasonable, real-world issues like lighting changes, airflow disturbance, estimator setup, and
+							communication reliability can dominate system performance.
+						</p>
+
+						<hr />
+
+						<ul class="actions">
+							<li><a href="index.html#one" class="button primary">Back to Projects</a></li>
+							<li><a href="resume.pdf" class="button">View Resume</a></li>
+						</ul>
 
 					</div>
-
-				<!-- Contact -->
-					<section id="contact">
-						<div class="inner">
-							<section>
-								<form method="post" action="#">
-									<div class="fields">
-										<div class="field half">
-											<label for="name">Name</label>
-											<input type="text" name="name" id="name" />
-										</div>
-										<div class="field half">
-											<label for="email">Email</label>
-											<input type="text" name="email" id="email" />
-										</div>
-										<div class="field">
-											<label for="message">Message</label>
-											<textarea name="message" id="message" rows="6"></textarea>
-										</div>
-									</div>
-									<ul class="actions">
-										<li><input type="submit" value="Send Message" class="primary" /></li>
-										<li><input type="reset" value="Clear" /></li>
-									</ul>
-								</form>
-							</section>
-							<section class="split">
-								<section>
-									<div class="contact-method">
-										<span class="icon solid alt fa-envelope"></span>
-										<h3>Email</h3>
-										<a href="#">information@untitled.tld</a>
-									</div>
-								</section>
-								<section>
-									<div class="contact-method">
-										<span class="icon solid alt fa-phone"></span>
-										<h3>Phone</h3>
-										<span>(000) 000-0000 x12387</span>
-									</div>
-								</section>
-								<section>
-									<div class="contact-method">
-										<span class="icon solid alt fa-home"></span>
-										<h3>Address</h3>
-										<span>1234 Somewhere Road #5432<br />
-										Nashville, TN 00000<br />
-										United States of America</span>
-									</div>
-								</section>
-							</section>
-						</div>
-					</section>
-
-				<!-- Footer -->
-					<footer id="footer">
-						<div class="inner">
-							<ul class="icons">
-								<li><a href="#" class="icon brands alt fa-twitter"><span class="label">Twitter</span></a></li>
-								<li><a href="#" class="icon brands alt fa-facebook-f"><span class="label">Facebook</span></a></li>
-								<li><a href="#" class="icon brands alt fa-instagram"><span class="label">Instagram</span></a></li>
-								<li><a href="#" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
-								<li><a href="#" class="icon brands alt fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
-							</ul>
-							<ul class="copyright">
-								<li>&copy; Untitled</li><li>Design: <a href="https://html5up.net">HTML5 UP</a></li>
-							</ul>
-						</div>
-					</footer>
+				</section>
 
 			</div>
 
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.scrolly.min.js"></script>
-			<script src="assets/js/jquery.scrollex.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
+			<section id="contact">
+				<div class="inner">
+
+					<section>
+						<header class="major">
+							<h2>Contact</h2>
+						</header>
+						<p>
+							I am interested in mechanical engineering opportunities involving design,
+							aerospace systems, mechatronics, manufacturing, testing, prototyping,
+							robotics, and hands-on engineering work.
+						</p>
+						<ul class="actions">
+							<li><a href="mailto:jirehevelasquez@gmail.com" class="button primary">Email Me</a></li>
+							<li><a href="resume.pdf" class="button">Resume</a></li>
+						</ul>
+					</section>
+
+					<section class="split">
+
+						<section>
+							<div class="contact-method">
+								<span class="icon solid alt fa-envelope"></span>
+								<h3>Email</h3>
+								<a href="mailto:jirehevelasquez@gmail.com">jirehevelasquez@gmail.com</a>
+							</div>
+						</section>
+
+						<section>
+							<div class="contact-method">
+								<span class="icon brands alt fa-github"></span>
+								<h3>GitHub</h3>
+								<a href="https://github.com/jirehevelasquez">github.com/jirehevelasquez</a>
+							</div>
+						</section>
+
+						<section>
+							<div class="contact-method">
+								<span class="icon brands alt fa-linkedin-in"></span>
+								<h3>LinkedIn</h3>
+								<a href="https://www.linkedin.com/in/your-linkedin">LinkedIn Profile</a>
+							</div>
+						</section>
+
+					</section>
+				</div>
+			</section>
+
+			<footer id="footer">
+				<div class="inner">
+					<ul class="icons">
+						<li><a href="mailto:jirehevelasquez@gmail.com" class="icon solid alt fa-envelope"><span class="label">Email</span></a></li>
+						<li><a href="https://github.com/jirehevelasquez" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
+						<li><a href="https://www.linkedin.com/in/your-linkedin" class="icon brands alt fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
+					</ul>
+					<ul class="copyright">
+						<li>&copy; Jireh Velasquez</li>
+						<li>Design: <a href="https://html5up.net">HTML5 UP</a></li>
+					</ul>
+				</div>
+			</footer>
+
+		</div>
+
+		<script src="assets/js/jquery.min.js"></script>
+		<script src="assets/js/jquery.scrolly.min.js"></script>
+		<script src="assets/js/jquery.scrollex.min.js"></script>
+		<script src="assets/js/browser.min.js"></script>
+		<script src="assets/js/breakpoints.min.js"></script>
+		<script src="assets/js/util.js"></script>
+		<script src="assets/js/main.js"></script>
 
 	</body>
 </html>
