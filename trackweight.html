@@ -10,7 +10,7 @@
 		<title>TrackWeight Smart Gym Tracking Device | Jireh Velasquez</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<meta name="description" content="TrackWeight smart gym tracking device by Jireh Velasquez featuring ESP32 embedded code, time-of-flight weight detection, IMU rep counting, WiFi transmission, Supabase integration, and product validation." />
+		<meta name="description" content="TrackWeight smart gym tracking device by Jireh Velasquez featuring ESP32 embedded code, time-of-flight weight detection, IMU rep counting, WiFi transmission, Supabase integration, live app development, and product validation." />
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<link rel="stylesheet" href="assets/css/custom.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
@@ -51,18 +51,21 @@
 						</header>
 
 						<span class="image main">
-							<img src="trackweight/images/trackweight-main.jpg" alt="TrackWeight smart gym tracking prototype" />
+							<img src="trackweight/images/trackweight-main.jpg" alt="TrackWeight smart gym tracking device" />
 						</span>
 
 						<h2>Media / Documentation</h2>
 						<p>
 							TrackWeight was a product-development and embedded-systems project focused on making workout tracking
 							automatic for weight-stack gym machines. The project combined customer discovery, market validation,
-							embedded hardware, sensor integration, WiFi communication, cloud storage, and dashboard concepts.
+							embedded hardware, sensor integration, WiFi communication, cloud storage, a live web app, and a dashboard
+							concept for organizing workout data.
 						</p>
 
 						<ul class="actions">
-							<li><a href="trackweight/trackweight-final-presentation.pdf" class="button primary">Final Presentation</a></li>
+							<li><a href="https://track-weight.lovable.app/" class="button primary">Live App / Website</a></li>
+							<li><a href="https://www.youtube.com/watch?v=r_3kmLopWDA" class="button">Demo Video</a></li>
+							<li><a href="trackweight/trackweight-final-presentation.pdf" class="button">Final Presentation</a></li>
 							<li><a href="https://github.com/jirehevelasquez/TrackWeight" class="button">GitHub Repository</a></li>
 							<li><a href="https://github.com/jirehevelasquez/TrackWeight/tree/main/operational" class="button">Operational Code</a></li>
 							<li><a href="https://github.com/jirehevelasquez/TrackWeight/tree/main/iterations" class="button">Code Iterations</a></li>
@@ -87,19 +90,19 @@
 
 								<div class="col-6">
 									<span class="image fit">
-										<img src="trackweight/images/trackweight-prototype.jpg" alt="TrackWeight hardware prototype concept" />
+										<img src="trackweight/images/trackweight-prototype.jpg" alt="TrackWeight smart pin hardware prototype concept" />
 									</span>
 								</div>
 
 								<div class="col-6">
 									<span class="image fit">
-										<img src="trackweight/images/trackweight-dashboard.jpg" alt="TrackWeight mobile dashboard concept" />
+										<img src="trackweight/images/trackweight-landing-page.jpg" alt="TrackWeight landing page and product validation website" />
 									</span>
 								</div>
 
 								<div class="col-6">
 									<span class="image fit">
-										<img src="trackweight/images/trackweight-landing-page.jpg" alt="TrackWeight landing page and product validation concept" />
+										<img src="trackweight/images/imu%20test%20trackweight.png" alt="TrackWeight IMU testing and rep detection screenshot" />
 									</span>
 								</div>
 
@@ -135,11 +138,11 @@
 									</tr>
 									<tr>
 										<td><strong>Software</strong></td>
-										<td>MicroPython, ESP32, I2C, WiFi networking, HTTP requests, Supabase REST API, NTP timestamping</td>
+										<td>MicroPython, ESP32, I2C, WiFi networking, HTTP requests, Supabase REST API, NTP timestamping, live web app</td>
 									</tr>
 									<tr>
 										<td><strong>Status</strong></td>
-										<td>Working proof-of-concept: weight identification, rep detection, ESP32 WiFi transmission, cloud database integration, and dashboard concept demonstrated</td>
+										<td>Working proof-of-concept: weight identification, rep detection, ESP32 WiFi transmission, cloud database integration, live app/website, and dashboard concept demonstrated</td>
 									</tr>
 								</tbody>
 							</table>
@@ -193,9 +196,10 @@
 						<h2>Product and Customer Validation</h2>
 						<p>
 							The project was not only a hardware prototype. The team also completed customer discovery, surveys,
-							landing-page testing, and business-model iteration to determine whether the product solved a real problem.
-							The team initially focused on gym members, then shifted toward gyms and fitness facilities as a stronger
-							customer segment because gym owners could benefit from utilization data and member-retention analytics.
+							landing-page testing, social media outreach, a live website, and business-model iteration to determine
+							whether the product solved a real problem. The team initially focused on gym members, then shifted toward
+							gyms and fitness facilities as a stronger customer segment because gym owners could benefit from utilization
+							data and member-retention analytics.
 						</p>
 
 						<div class="table-wrapper">
@@ -303,10 +307,12 @@
 							vibration, or very small movements.
 						</p>
 
-						<h3>Cloud Data Upload</h3>
+						<h3>Cloud Data Upload and App Workflow</h3>
 						<p>
 							After a workout set is complete, the ESP32 sends the workout event to Supabase using an HTTP POST request.
-							The data payload includes the machine name, rep count, user slot, selected weight, and timestamp.
+							The data payload includes the machine name, rep count, user slot, selected weight, and timestamp. The
+							live web app and dashboard concept demonstrate how the stored data could be organized into a user-facing
+							workout history and gym analytics workflow.
 						</p>
 
 						<ul>
@@ -314,6 +320,7 @@
 							<li>Added reconnection logic in case WiFi disconnected before upload.</li>
 							<li>Used NTP time sync to generate UTC timestamps.</li>
 							<li>Sent workout events to a Supabase REST endpoint.</li>
+							<li>Built a live web/app experience to communicate the product concept and user workflow.</li>
 						</ul>
 
 						<h2>Code Repository Structure</h2>
@@ -357,6 +364,7 @@
 							<li><strong>Embedded Hardware:</strong> ESP32, VL53L0X time-of-flight sensor, MPU6050 IMU, I2C communication</li>
 							<li><strong>Programming:</strong> MicroPython, modular sensor drivers, state-machine logic, filtering, calibration constants</li>
 							<li><strong>Cloud / Data:</strong> WiFi networking, HTTP POST requests, Supabase REST API, NTP timestamps</li>
+							<li><strong>Web / Product:</strong> live app/website, dashboard concept, landing page, user workflow design</li>
 							<li><strong>Product Development:</strong> customer interviews, surveys, landing-page testing, value proposition canvas, business model iteration</li>
 							<li><strong>Prototype Validation:</strong> rep detection, weight identification, real-time data transmission, dashboard concept</li>
 						</ul>
@@ -369,9 +377,9 @@
 						</p>
 
 						<p>
-							The team also validated customer interest through interviews, surveys, landing-page testing, and gym-industry
-							feedback. Remaining risks include battery life, manufacturing cost, durability, scaling, and adoption by gyms
-							or users.
+							The team also validated customer interest through interviews, surveys, landing-page testing, social media,
+							a live app/website, and gym-industry feedback. Remaining risks include battery life, manufacturing cost,
+							durability, scaling, and adoption by gyms or users.
 						</p>
 
 						<h2>Challenges and Debugging</h2>
@@ -392,8 +400,8 @@
 
 						<p>
 							The project also strengthened my experience with sensor integration, MicroPython development, ESP32 networking,
-							cloud-connected data logging, and product validation. TrackWeight required both engineering execution and
-							customer-focused iteration.
+							cloud-connected data logging, live app development, and product validation. TrackWeight required both engineering
+							execution and customer-focused iteration.
 						</p>
 
 						<hr />
@@ -401,6 +409,7 @@
 						<ul class="actions">
 							<li><a href="index.html#one" class="button primary">Back to Projects</a></li>
 							<li><a href="resume.pdf" class="button">View Resume</a></li>
+							<li><a href="https://track-weight.lovable.app/" class="button">Live App / Website</a></li>
 							<li><a href="https://github.com/jirehevelasquez/TrackWeight" class="button">GitHub Repository</a></li>
 						</ul>
 
